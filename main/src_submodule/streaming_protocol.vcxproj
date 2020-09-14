@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CAE2CE11-A768-4A0A-A02D-9888D6D5254C}</ProjectGuid>
+    <RootNamespace>Simple</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.61030.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Configuration)_$(Platform)\Out\</OutDir>
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Configuration)_$(Platform)\Int\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Configuration)_$(Platform)\Out\</OutDir>
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Configuration)_$(Platform)\Int\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Configuration)_$(Platform)\Out\</OutDir>
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Configuration)_$(Platform)\Int\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Configuration)_$(Platform)\Out\</OutDir>
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Configuration)_$(Platform)\Int\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\$(Platform)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>xstypes32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+    </Link>
+    <PostBuildEvent>
+      <Message>Copying XsTypes dll</Message>
+      <Command>if $(Platform)==x64 (
+set postfix=64
+) else (
+set postfix=32
+)
+
+copy /Y /B "..\..\$(Platform)\lib\xstypes%postfix%.dll" "$(OutDir)" &gt;NUL</Command>
+    </PostBuildEvent>
+    <BuildLog>
+      <Path>$(IntDir)\msbuild.log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\$(Platform)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>xstypes64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copying XsTypes dll</Message>
+      <Command>if $(Platform)==x64 (
+set postfix=64
+) else (
+set postfix=32
+)
+
+copy /Y /B "..\..\$(Platform)\lib\xstypes%postfix%.dll" "$(OutDir)" &gt;NUL</Command>
+    </PostBuildEvent>
+    <BuildLog>
+      <Path>$(IntDir)\msbuild.log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\$(Platform)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>xstypes32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+    </Link>
+    <PostBuildEvent>
+      <Message>Copying XsTypes dll</Message>
+      <Command>if $(Platform)==x64 (
+set postfix=64
+) else (
+set postfix=32
+)
+
+copy /Y /B "..\..\$(Platform)\lib\xstypes%postfix%.dll" "$(OutDir)" &gt;NUL</Command>
+    </PostBuildEvent>
+    <BuildLog>
+      <Path>$(IntDir)\msbuild.log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\$(Platform)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>xstypes64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copying XsTypes dll</Message>
+      <Command>if $(Platform)==x64 (
+set postfix=64
+) else (
+set postfix=32
+)
+
+copy /Y /B "..\..\$(Platform)\lib\xstypes%postfix%.dll" "$(OutDir)" &gt;NUL</Command>
+    </PostBuildEvent>
+    <BuildLog>
+      <Path>$(IntDir)\msbuild.log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="streaming_protocol\angularsegmentkinematicsdatagram.cpp" />
+    <ClCompile Include="streaming_protocol\centerofmassdatagram.cpp" />
+    <ClCompile Include="streaming_protocol\datagram.cpp" />
+    <ClCompile Include="streaming_protocol\eulerdatagram.cpp" />
+    <ClCompile Include="streaming_protocol\jointanglesdatagram.cpp" />
+    <ClCompile Include="streaming_protocol\linearsegmentkinematicsdatagram.cpp" />
+    <ClCompile Include="streaming_protocol\main.cpp" />
+    <ClCompile Include="streaming_protocol\metadatagram.cpp" />
+    <ClCompile Include="streaming_protocol\parsermanager.cpp" />
+    <ClCompile Include="streaming_protocol\positiondatagram.cpp" />
+    <ClCompile Include="streaming_protocol\quaterniondatagram.cpp" />
+    <ClCompile Include="streaming_protocol\scaledatagram.cpp" />
+    <ClCompile Include="streaming_protocol\streamer.cpp" />
+    <ClCompile Include="streaming_protocol\timecodedatagram.cpp" />
+    <ClCompile Include="streaming_protocol\trackerkinematicsdatagram.cpp" />
+    <ClCompile Include="streaming_protocol\udpserver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="streaming_protocol\angularsegmentkinematicsdatagram.h" />
+    <ClInclude Include="streaming_protocol\centerofmassdatagram.h" />
+    <ClInclude Include="streaming_protocol\datagram.h" />
+    <ClInclude Include="streaming_protocol\eulerdatagram.h" />
+    <ClInclude Include="streaming_protocol\jointanglesdatagram.h" />
+    <ClInclude Include="streaming_protocol\linearsegmentkinematicsdatagram.h" />
+    <ClInclude Include="streaming_protocol\lsl_c.h" />
+    <ClInclude Include="streaming_protocol\lsl_cpp.h" />
+    <ClInclude Include="streaming_protocol\metadatagram.h" />
+    <ClInclude Include="streaming_protocol\parsermanager.h" />
+    <ClInclude Include="streaming_protocol\positiondatagram.h" />
+    <ClInclude Include="streaming_protocol\quaterniondatagram.h" />
+    <ClInclude Include="streaming_protocol\scaledatagram.h" />
+    <ClInclude Include="streaming_protocol\streamer.h" />
+    <ClInclude Include="streaming_protocol\timecodedatagram.h" />
+    <ClInclude Include="streaming_protocol\trackerkinematicsdatagram.h" />
+    <ClInclude Include="streaming_protocol\udpserver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Users\SMIL\Desktop\SyncProtocol\Out\liblsl64.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\..\..\..\Users\SMIL\Desktop\SyncProtocol\Out\liblsl64.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

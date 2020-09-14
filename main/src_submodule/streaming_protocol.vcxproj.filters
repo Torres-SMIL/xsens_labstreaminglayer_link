@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="streaming_protocol\angularsegmentkinematicsdatagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\centerofmassdatagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\datagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\eulerdatagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\jointanglesdatagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\linearsegmentkinematicsdatagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\metadatagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\parsermanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\positiondatagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\quaterniondatagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\scaledatagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\streamer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\timecodedatagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\trackerkinematicsdatagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streaming_protocol\udpserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="streaming_protocol\angularsegmentkinematicsdatagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\centerofmassdatagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\datagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\eulerdatagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\jointanglesdatagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\linearsegmentkinematicsdatagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\metadatagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\parsermanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\positiondatagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\quaterniondatagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\scaledatagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\streamer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\timecodedatagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\trackerkinematicsdatagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\udpserver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\lsl_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streaming_protocol\lsl_cpp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Users\SMIL\Desktop\SyncProtocol\Out\liblsl64.dll">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\..\..\..\Users\SMIL\Desktop\SyncProtocol\Out\liblsl64.lib">
+      <Filter>Resource Files</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
